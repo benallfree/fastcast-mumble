@@ -50,6 +50,7 @@
 }
 
 - (void) connectionOpened:(MKConnection *)conn {
+    [loading_alert dismissWithClickedButtonIndex:0 animated:YES];
     lb_status.text = @"Connecting is successed!";
     [conn authenticateWithUsername:USER_NAME password:USER_PASSWORD accessTokens:nil];
 }
