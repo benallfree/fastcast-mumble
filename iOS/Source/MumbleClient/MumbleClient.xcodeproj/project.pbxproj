@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FE2FD7B1C1E6AEE00708867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2FD7A1C1E6AEE00708867 /* main.m */; };
+		8FE2FD7E1C1E6AEE00708867 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2FD7D1C1E6AEE00708867 /* AppDelegate.m */; };
+		8FE2FD811C1E6AEE00708867 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2FD801C1E6AEE00708867 /* ViewController.m */; };
+		8FE2FD841C1E6AEE00708867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE2FD821C1E6AEE00708867 /* Main.storyboard */; };
+		8FE2FD861C1E6AEE00708867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE2FD851C1E6AEE00708867 /* Assets.xcassets */; };
+		8FE2FD891C1E6AEE00708867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE2FD871C1E6AEE00708867 /* LaunchScreen.storyboard */; };
+		8FE2FD941C1E6AEE00708867 /* MumbleClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2FD931C1E6AEE00708867 /* MumbleClientTests.m */; };
+		8FE2FD9F1C1E6AEE00708867 /* MumbleClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2FD9E1C1E6AEE00708867 /* MumbleClientUITests.m */; };
+		8FE2FDC41C1E6CF100708867 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2FDC31C1E6CF000708867 /* AudioToolbox.framework */; };
+		8FE2FDC61C1E6CF800708867 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2FDC51C1E6CF800708867 /* CFNetwork.framework */; };
+		8FE2FDC81C1E6CFE00708867 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2FDC71C1E6CFE00708867 /* Security.framework */; };
+		8FE2FDCD1C1E955100708867 /* libMumbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2FDBF1C1E6CC700708867 /* libMumbleKit.a */; };
+		8FE2FDD11C1EB59800708867 /* Dialogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2FDD01C1EB59800708867 /* Dialogs.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FE2FD901C1E6AEE00708867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FE2FD6E1C1E6AEE00708867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FE2FD751C1E6AEE00708867;
+			remoteInfo = MumbleClient;
+		};
+		8FE2FD9B1C1E6AEE00708867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FE2FD6E1C1E6AEE00708867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FE2FD751C1E6AEE00708867;
+			remoteInfo = MumbleClient;
+		};
+		8FE2FDBE1C1E6CC700708867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FE2FDB31C1E6CC700708867 /* MumbleKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 28BCF2C1132AE3B40003AEC1;
+			remoteInfo = "MumbleKit (iOS)";
+		};
+		8FE2FDC01C1E6CC700708867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FE2FDB31C1E6CC700708867 /* MumbleKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2845A71A132D9B2F0034D631;
+			remoteInfo = "MumbleKit (Mac)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FE2FD761C1E6AEE00708867 /* MumbleClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MumbleClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE2FD7A1C1E6AEE00708867 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FE2FD7C1C1E6AEE00708867 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8FE2FD7D1C1E6AEE00708867 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8FE2FD7F1C1E6AEE00708867 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8FE2FD801C1E6AEE00708867 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8FE2FD831C1E6AEE00708867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FE2FD851C1E6AEE00708867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FE2FD881C1E6AEE00708867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FE2FD8A1C1E6AEE00708867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE2FD8F1C1E6AEE00708867 /* MumbleClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MumbleClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE2FD931C1E6AEE00708867 /* MumbleClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MumbleClientTests.m; sourceTree = "<group>"; };
+		8FE2FD951C1E6AEE00708867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE2FD9A1C1E6AEE00708867 /* MumbleClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MumbleClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE2FD9E1C1E6AEE00708867 /* MumbleClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MumbleClientUITests.m; sourceTree = "<group>"; };
+		8FE2FDA01C1E6AEE00708867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE2FDB31C1E6CC700708867 /* MumbleKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MumbleKit.xcodeproj; path = MumbleKit/MumbleKit.xcodeproj; sourceTree = "<group>"; };
+		8FE2FDC31C1E6CF000708867 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8FE2FDC51C1E6CF800708867 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8FE2FDC71C1E6CFE00708867 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8FE2FDCF1C1EB59800708867 /* Dialogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dialogs.h; sourceTree = "<group>"; };
+		8FE2FDD01C1EB59800708867 /* Dialogs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dialogs.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FE2FD731C1E6AEE00708867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE2FDCD1C1E955100708867 /* libMumbleKit.a in Frameworks */,
+				8FE2FDC81C1E6CFE00708867 /* Security.framework in Frameworks */,
+				8FE2FDC61C1E6CF800708867 /* CFNetwork.framework in Frameworks */,
+				8FE2FDC41C1E6CF100708867 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE2FD8C1C1E6AEE00708867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE2FD971C1E6AEE00708867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FE2FD6D1C1E6AEE00708867 = {
+			isa = PBXGroup;
+			children = (
+				8FE2FDC71C1E6CFE00708867 /* Security.framework */,
+				8FE2FDC51C1E6CF800708867 /* CFNetwork.framework */,
+				8FE2FDC31C1E6CF000708867 /* AudioToolbox.framework */,
+				8FE2FDB31C1E6CC700708867 /* MumbleKit.xcodeproj */,
+				8FE2FD781C1E6AEE00708867 /* MumbleClient */,
+				8FE2FD921C1E6AEE00708867 /* MumbleClientTests */,
+				8FE2FD9D1C1E6AEE00708867 /* MumbleClientUITests */,
+				8FE2FD771C1E6AEE00708867 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FE2FD771C1E6AEE00708867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FD761C1E6AEE00708867 /* MumbleClient.app */,
+				8FE2FD8F1C1E6AEE00708867 /* MumbleClientTests.xctest */,
+				8FE2FD9A1C1E6AEE00708867 /* MumbleClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FE2FD781C1E6AEE00708867 /* MumbleClient */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FDCE1C1EB59800708867 /* Common */,
+				8FE2FD7C1C1E6AEE00708867 /* AppDelegate.h */,
+				8FE2FD7D1C1E6AEE00708867 /* AppDelegate.m */,
+				8FE2FD7F1C1E6AEE00708867 /* ViewController.h */,
+				8FE2FD801C1E6AEE00708867 /* ViewController.m */,
+				8FE2FD821C1E6AEE00708867 /* Main.storyboard */,
+				8FE2FD851C1E6AEE00708867 /* Assets.xcassets */,
+				8FE2FD871C1E6AEE00708867 /* LaunchScreen.storyboard */,
+				8FE2FD8A1C1E6AEE00708867 /* Info.plist */,
+				8FE2FD791C1E6AEE00708867 /* Supporting Files */,
+			);
+			path = MumbleClient;
+			sourceTree = "<group>";
+		};
+		8FE2FD791C1E6AEE00708867 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FD7A1C1E6AEE00708867 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FE2FD921C1E6AEE00708867 /* MumbleClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FD931C1E6AEE00708867 /* MumbleClientTests.m */,
+				8FE2FD951C1E6AEE00708867 /* Info.plist */,
+			);
+			path = MumbleClientTests;
+			sourceTree = "<group>";
+		};
+		8FE2FD9D1C1E6AEE00708867 /* MumbleClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FD9E1C1E6AEE00708867 /* MumbleClientUITests.m */,
+				8FE2FDA01C1E6AEE00708867 /* Info.plist */,
+			);
+			path = MumbleClientUITests;
+			sourceTree = "<group>";
+		};
+		8FE2FDB41C1E6CC700708867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FDBF1C1E6CC700708867 /* libMumbleKit.a */,
+				8FE2FDC11C1E6CC700708867 /* MumbleKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FE2FDCE1C1EB59800708867 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2FDCF1C1EB59800708867 /* Dialogs.h */,
+				8FE2FDD01C1EB59800708867 /* Dialogs.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FE2FD751C1E6AEE00708867 /* MumbleClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FE2FDA31C1E6AEE00708867 /* Build configuration list for PBXNativeTarget "MumbleClient" */;
+			buildPhases = (
+				8FE2FD721C1E6AEE00708867 /* Sources */,
+				8FE2FD731C1E6AEE00708867 /* Frameworks */,
+				8FE2FD741C1E6AEE00708867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MumbleClient;
+			productName = MumbleClient;
+			productReference = 8FE2FD761C1E6AEE00708867 /* MumbleClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FE2FD8E1C1E6AEE00708867 /* MumbleClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FE2FDA61C1E6AEE00708867 /* Build configuration list for PBXNativeTarget "MumbleClientTests" */;
+			buildPhases = (
+				8FE2FD8B1C1E6AEE00708867 /* Sources */,
+				8FE2FD8C1C1E6AEE00708867 /* Frameworks */,
+				8FE2FD8D1C1E6AEE00708867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FE2FD911C1E6AEE00708867 /* PBXTargetDependency */,
+			);
+			name = MumbleClientTests;
+			productName = MumbleClientTests;
+			productReference = 8FE2FD8F1C1E6AEE00708867 /* MumbleClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FE2FD991C1E6AEE00708867 /* MumbleClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FE2FDA91C1E6AEE00708867 /* Build configuration list for PBXNativeTarget "MumbleClientUITests" */;
+			buildPhases = (
+				8FE2FD961C1E6AEE00708867 /* Sources */,
+				8FE2FD971C1E6AEE00708867 /* Frameworks */,
+				8FE2FD981C1E6AEE00708867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FE2FD9C1C1E6AEE00708867 /* PBXTargetDependency */,
+			);
+			name = MumbleClientUITests;
+			productName = MumbleClientUITests;
+			productReference = 8FE2FD9A1C1E6AEE00708867 /* MumbleClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FE2FD6E1C1E6AEE00708867 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = altair;
+				TargetAttributes = {
+					8FE2FD751C1E6AEE00708867 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					8FE2FD8E1C1E6AEE00708867 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 8FE2FD751C1E6AEE00708867;
+					};
+					8FE2FD991C1E6AEE00708867 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 8FE2FD751C1E6AEE00708867;
+					};
+				};
+			};
+			buildConfigurationList = 8FE2FD711C1E6AEE00708867 /* Build configuration list for PBXProject "MumbleClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FE2FD6D1C1E6AEE00708867;
+			productRefGroup = 8FE2FD771C1E6AEE00708867 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8FE2FDB41C1E6CC700708867 /* Products */;
+					ProjectRef = 8FE2FDB31C1E6CC700708867 /* MumbleKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8FE2FD751C1E6AEE00708867 /* MumbleClient */,
+				8FE2FD8E1C1E6AEE00708867 /* MumbleClientTests */,
+				8FE2FD991C1E6AEE00708867 /* MumbleClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8FE2FDBF1C1E6CC700708867 /* libMumbleKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMumbleKit.a;
+			remoteRef = 8FE2FDBE1C1E6CC700708867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8FE2FDC11C1E6CC700708867 /* MumbleKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MumbleKit.framework;
+			remoteRef = 8FE2FDC01C1E6CC700708867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FE2FD741C1E6AEE00708867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE2FD891C1E6AEE00708867 /* LaunchScreen.storyboard in Resources */,
+				8FE2FD861C1E6AEE00708867 /* Assets.xcassets in Resources */,
+				8FE2FD841C1E6AEE00708867 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE2FD8D1C1E6AEE00708867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE2FD981C1E6AEE00708867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FE2FD721C1E6AEE00708867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE2FD811C1E6AEE00708867 /* ViewController.m in Sources */,
+				8FE2FD7E1C1E6AEE00708867 /* AppDelegate.m in Sources */,
+				8FE2FD7B1C1E6AEE00708867 /* main.m in Sources */,
+				8FE2FDD11C1EB59800708867 /* Dialogs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE2FD8B1C1E6AEE00708867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE2FD941C1E6AEE00708867 /* MumbleClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE2FD961C1E6AEE00708867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE2FD9F1C1E6AEE00708867 /* MumbleClientUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FE2FD911C1E6AEE00708867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FE2FD751C1E6AEE00708867 /* MumbleClient */;
+			targetProxy = 8FE2FD901C1E6AEE00708867 /* PBXContainerItemProxy */;
+		};
+		8FE2FD9C1C1E6AEE00708867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FE2FD751C1E6AEE00708867 /* MumbleClient */;
+			targetProxy = 8FE2FD9B1C1E6AEE00708867 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FE2FD821C1E6AEE00708867 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FE2FD831C1E6AEE00708867 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FE2FD871C1E6AEE00708867 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FE2FD881C1E6AEE00708867 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FE2FDA11C1E6AEE00708867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FE2FDA21C1E6AEE00708867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FE2FDA41C1E6AEE00708867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeff Lee (A676BC532X)";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MumbleKit/src/";
+				INFOPLIST_FILE = MumbleClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altair.MumbleClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c0cf684-a331-4bc9-9a24-f0b14882a5aa";
+			};
+			name = Debug;
+		};
+		8FE2FDA51C1E6AEE00708867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MumbleKit/src/";
+				INFOPLIST_FILE = MumbleClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altair.MumbleClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8FE2FDA71C1E6AEE00708867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MumbleClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altair.MumbleClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MumbleClient.app/MumbleClient";
+			};
+			name = Debug;
+		};
+		8FE2FDA81C1E6AEE00708867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MumbleClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altair.MumbleClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MumbleClient.app/MumbleClient";
+			};
+			name = Release;
+		};
+		8FE2FDAA1C1E6AEE00708867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MumbleClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altair.MumbleClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MumbleClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8FE2FDAB1C1E6AEE00708867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MumbleClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altair.MumbleClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MumbleClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FE2FD711C1E6AEE00708867 /* Build configuration list for PBXProject "MumbleClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE2FDA11C1E6AEE00708867 /* Debug */,
+				8FE2FDA21C1E6AEE00708867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FE2FDA31C1E6AEE00708867 /* Build configuration list for PBXNativeTarget "MumbleClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE2FDA41C1E6AEE00708867 /* Debug */,
+				8FE2FDA51C1E6AEE00708867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FE2FDA61C1E6AEE00708867 /* Build configuration list for PBXNativeTarget "MumbleClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE2FDA71C1E6AEE00708867 /* Debug */,
+				8FE2FDA81C1E6AEE00708867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FE2FDA91C1E6AEE00708867 /* Build configuration list for PBXNativeTarget "MumbleClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE2FDAA1C1E6AEE00708867 /* Debug */,
+				8FE2FDAB1C1E6AEE00708867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FE2FD6E1C1E6AEE00708867 /* Project object */;
+}

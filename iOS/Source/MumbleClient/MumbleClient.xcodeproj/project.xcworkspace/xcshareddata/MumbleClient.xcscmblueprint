@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0A0FA4BF62C915014B94FC8E09F59DED9622372C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "409A2EF878654D92A18DAC2E7D8CC80F9178683D" : 0,
+    "0A0FA4BF62C915014B94FC8E09F59DED9622372C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F872DFF4-8A6B-4D75-BE74-A3A7A04B6165",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "409A2EF878654D92A18DAC2E7D8CC80F9178683D" : "..",
+    "0A0FA4BF62C915014B94FC8E09F59DED9622372C" : "fastcast-mumble\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MumbleClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/Source\/MumbleClient\/MumbleClient.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/benallfree\/fastcast-mumble.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A0FA4BF62C915014B94FC8E09F59DED9622372C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/rfwahab\/magicformsios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "409A2EF878654D92A18DAC2E7D8CC80F9178683D"
+    }
+  ]
+}
