@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -34,6 +35,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="pCk-az-v6w"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Connect/Disconnect">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,32 +43,95 @@
                                     <action selector="onConnectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHQ-lS-FTy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6R-Dd-B3R">
-                                <rect key="frame" x="140" y="300" width="40" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connection status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6R-Dd-B3R">
+                                <rect key="frame" x="180" y="280" width="116" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1h-dS-1rf">
+                                <rect key="frame" x="40" y="370" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Iqv-Cd-W5N"/>
+                                    <constraint firstAttribute="height" constant="30" id="a4l-U1-mnd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Record/Stop">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRecordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUT-7z-5m9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSq-pr-6EI">
+                                <rect key="frame" x="170" y="370" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="U3G-pd-Glb"/>
+                                    <constraint firstAttribute="width" constant="110" id="mId-2a-7qi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Play WAV">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1oU-vT-kf8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="record/play status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRv-gj-CdM">
+                                <rect key="frame" x="102" y="430" width="117" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm2-0C-h9t">
+                                <rect key="frame" x="105" y="500" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fjk-gJ-kxr"/>
+                                    <constraint firstAttribute="width" constant="110" id="OTs-CW-klE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Delete WAV">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDeleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YE9-pT-1sa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A42-53-bj5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="49c-2l-8Bm"/>
                             <constraint firstItem="Wz3-qN-DOk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="7hk-ci-kin"/>
-                            <constraint firstItem="h6R-Dd-B3R" firstAttribute="top" secondItem="ctf-C2-lOQ" secondAttribute="bottom" constant="70" id="GQv-ko-siW"/>
+                            <constraint firstItem="n1h-dS-1rf" firstAttribute="top" secondItem="ctf-C2-lOQ" secondAttribute="bottom" constant="140" id="Dto-lF-d6g"/>
+                            <constraint firstItem="h6R-Dd-B3R" firstAttribute="top" secondItem="ctf-C2-lOQ" secondAttribute="bottom" constant="50" id="GQv-ko-siW"/>
+                            <constraint firstItem="qRv-gj-CdM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K5H-AM-MpQ"/>
                             <constraint firstItem="A42-53-bj5" firstAttribute="top" secondItem="Wz3-qN-DOk" secondAttribute="bottom" constant="25" id="Mgd-Sw-R3C"/>
+                            <constraint firstItem="qRv-gj-CdM" firstAttribute="top" secondItem="BSq-pr-6EI" secondAttribute="bottom" constant="30" id="Nyx-t9-bas"/>
                             <constraint firstItem="ctf-C2-lOQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="TYz-Ia-iBt"/>
-                            <constraint firstItem="h6R-Dd-B3R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aoT-qO-6J5"/>
+                            <constraint firstAttribute="trailing" secondItem="BSq-pr-6EI" secondAttribute="trailing" constant="40" id="TuY-Gi-mLo"/>
+                            <constraint firstAttribute="trailing" secondItem="h6R-Dd-B3R" secondAttribute="trailing" constant="24" id="bed-2f-a18"/>
                             <constraint firstItem="Wz3-qN-DOk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cnb-bK-tRg"/>
                             <constraint firstAttribute="trailing" secondItem="A42-53-bj5" secondAttribute="trailing" constant="40" id="d4v-89-ozn"/>
+                            <constraint firstItem="n1h-dS-1rf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="dns-zI-GZf"/>
                             <constraint firstAttribute="trailing" secondItem="Wz3-qN-DOk" secondAttribute="trailing" id="doV-R6-mom"/>
                             <constraint firstAttribute="trailing" secondItem="ctf-C2-lOQ" secondAttribute="trailing" constant="60" id="nV0-ux-ALa"/>
+                            <constraint firstItem="Lm2-0C-h9t" firstAttribute="top" secondItem="qRv-gj-CdM" secondAttribute="bottom" constant="53" id="r7y-yj-7Gn"/>
                             <constraint firstItem="ctf-C2-lOQ" firstAttribute="top" secondItem="A42-53-bj5" secondAttribute="bottom" constant="33" id="vcz-uo-Qul"/>
+                            <constraint firstItem="BSq-pr-6EI" firstAttribute="top" secondItem="ctf-C2-lOQ" secondAttribute="bottom" constant="140" id="xv9-Iv-q0r"/>
+                            <constraint firstItem="Lm2-0C-h9t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y8T-5j-9EI"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="lb_recording_status" destination="qRv-gj-CdM" id="Gga-mx-tSu"/>
                         <outlet property="lb_screenName" destination="A42-53-bj5" id="Dqr-t3-CUe"/>
                         <outlet property="lb_status" destination="h6R-Dd-B3R" id="tnL-dy-oH1"/>
+                        <outlet property="playButton" destination="BSq-pr-6EI" id="n7C-6H-qbU"/>
+                        <outlet property="recordButton" destination="n1h-dS-1rf" id="t6T-fo-cRd"/>
+                        <outlet property="trashButton" destination="Lm2-0C-h9t" id="Nsb-Aw-6mr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
