@@ -1,0 +1,65 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0A0FA4BF62C915014B94FC8E09F59DED9622372C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FEE1C572E49EA55C05E04A41217533B1E41F83F3" : 0,
+    "0A0FA4BF62C915014B94FC8E09F59DED9622372C" : 0,
+    "37627A916738CB9184999F34BEDC8F4742020B72" : 0,
+    "7F4FF6C5F6F5A0EA206DC318D6A95CC361CC7EEE" : 0,
+    "0188F2A2CDE1E23FB54BA7DEC720DB0076A94A2D" : 0,
+    "11CBFBF335C4A4D8CFA40109E8B6461A2D698D04" : 0,
+    "60C590E0A1E3A270911208E27AD0681DC1AAA138" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5BFCF2BE-F379-4553-B36A-9970D7433989",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FEE1C572E49EA55C05E04A41217533B1E41F83F3" : "fastcast-mumble\/MumbleTrial\/Library\/mumblekit\/3rdparty\/speex\/",
+    "0A0FA4BF62C915014B94FC8E09F59DED9622372C" : "fastcast-mumble\/",
+    "37627A916738CB9184999F34BEDC8F4742020B72" : "fastcast-mumble\/MumbleTrial\/Library\/mumblekit\/3rdparty\/celt-0.7.0\/",
+    "7F4FF6C5F6F5A0EA206DC318D6A95CC361CC7EEE" : "fastcast-mumble\/MumbleTrial\/Library\/mumblekit\/",
+    "0188F2A2CDE1E23FB54BA7DEC720DB0076A94A2D" : "fastcast-mumble\/MumbleTrial\/Library\/mumblekit\/3rdparty\/protobuf\/",
+    "11CBFBF335C4A4D8CFA40109E8B6461A2D698D04" : "fastcast-mumble\/MumbleTrial\/Library\/mumblekit\/3rdparty\/openssl\/",
+    "60C590E0A1E3A270911208E27AD0681DC1AAA138" : "fastcast-mumble\/MumbleTrial\/Library\/mumblekit\/3rdparty\/opus\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MumbleTrial",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MumbleTrial\/MumbleTrial.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/booyah\/protobuf-objc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0188F2A2CDE1E23FB54BA7DEC720DB0076A94A2D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/benallfree\/fastcast-mumble.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A0FA4BF62C915014B94FC8E09F59DED9622372C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/mkrautz\/openssl-mirror.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "11CBFBF335C4A4D8CFA40109E8B6461A2D698D04"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/mumble-voip\/celt-0.7.0.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37627A916738CB9184999F34BEDC8F4742020B72"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/xiph\/opus.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "60C590E0A1E3A270911208E27AD0681DC1AAA138"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mumble-voip\/mumblekit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F4FF6C5F6F5A0EA206DC318D6A95CC361CC7EEE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/xiph\/speex.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FEE1C572E49EA55C05E04A41217533B1E41F83F3"
+    }
+  ]
+}
