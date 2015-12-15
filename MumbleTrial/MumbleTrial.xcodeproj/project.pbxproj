@@ -34,6 +34,7 @@
 		0F131F461C1F3D2200DD8CD4 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F131F3A1C1F3D2200DD8CD4 /* LevelMeter.m */; };
 		0F131F471C1F3D2200DD8CD4 /* LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F131F3C1C1F3D2200DD8CD4 /* LevelView.m */; };
 		0F131F481C1F3D2200DD8CD4 /* MeterTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F131F3D1C1F3D2200DD8CD4 /* MeterTable.cpp */; };
+		0F991E7D1C205EC5007B9BBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F991E7C1C205EC5007B9BBF /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		0F131F3C1C1F3D2200DD8CD4 /* LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelView.m; sourceTree = "<group>"; };
 		0F131F3D1C1F3D2200DD8CD4 /* MeterTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeterTable.cpp; sourceTree = "<group>"; };
 		0F131F3E1C1F3D2200DD8CD4 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
+		0F991E7C1C205EC5007B9BBF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F991E7D1C205EC5007B9BBF /* AVFoundation.framework in Frameworks */,
 				0F131F291C1F3C8100DD8CD4 /* libMumbleKit.a in Frameworks */,
 				0F131F261C1F3AD200DD8CD4 /* OpenGLES.framework in Frameworks */,
 				0F131F241C1F3AC900DD8CD4 /* QuartzCore.framework in Frameworks */,
@@ -182,6 +185,7 @@
 		0F131EC91C1F233C00DD8CD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F991E7C1C205EC5007B9BBF /* AVFoundation.framework */,
 				0F131F251C1F3AD200DD8CD4 /* OpenGLES.framework */,
 				0F131F231C1F3AC900DD8CD4 /* QuartzCore.framework */,
 				0F131F211C1F3AC000DD8CD4 /* CoreAudio.framework */,

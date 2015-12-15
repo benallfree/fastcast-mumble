@@ -34,6 +34,7 @@
     
     MKAudio *audio = [MKAudio sharedAudio];
     [audio updateAudioSettings:&settings];
+    [audio stop];
     [audio restart];
     return YES;
 }

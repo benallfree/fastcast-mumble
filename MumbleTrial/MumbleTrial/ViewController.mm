@@ -13,6 +13,9 @@
 #import <MKServerModel.h>
 #import <MKCertificate.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MKAudio.h>
+
 
 #define SERVER_ADDRESS @"104.131.172.77"
 #define SERVER_PORT 64738
@@ -128,32 +131,10 @@ char *OSTypeToStr(char *buf, OSType t)
     
     recorder = new AQRecorder();
     player = new AQPlayer();
-    
-    OSStatus error = AudioSessionInitialize(nil, nil, interruptionListener, (__bridge void*)self);
-    if (error) printf("ERROR INITIALIZING AUDIO SESSION! %d\n", (int)error);
-    else
-    {
-        UInt32 category = kAudioSessionCategory_PlayAndRecord;
-        error = AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(category), &category);
-        if (error) printf("couldn't set audio category!");
-        
-        error = AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, propListener, (__bridge void*)self);
-        if (error) printf("ERROR ADDING AUDIO SESSION PROP LISTENER! %d\n", (int)error);
-        UInt32 inputAvailable = 0;
-        UInt32 size = sizeof(inputAvailable);
-        
-        // we do not want to allow recording if input is not available
-        error = AudioSessionGetProperty(kAudioSessionProperty_AudioInputAvailable, &size, &inputAvailable);
-        if (error) printf("ERROR GETTING INPUT AVAILABILITY! %d\n", (int)error);
-        recordButton.enabled = (inputAvailable) ? YES : NO;
-        
-        // we also need to listen to see if input availability changes
-        error = AudioSessionAddPropertyListener(kAudioSessionProperty_AudioInputAvailable, propListener, (__bridge void*)self);
-        if (error) printf("ERROR ADDING AUDIO SESSION PROP LISTENER! %d\n", (int)error);
-        
-        error = AudioSessionSetActive(true);
-        if (error) printf("AudioSessionSetActive (true) failed");
-    }
+    [self setupAudioSessionForRecord];
+}
+
+- (void) setupAudioSessionForRecord {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackQueueStopped:) name:@"playbackQueueStopped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackQueueResumed:) name:@"playbackQueueResumed" object:nil];
@@ -162,6 +143,10 @@ char *OSTypeToStr(char *buf, OSType t)
     playButton.enabled = NO;
     playbackWasInterrupted = NO;
     playbackWasPaused = NO;
+}
+
+- (void) stopAudioSession {
+//    AudioSessionSetActive(false);
 }
 
 void interruptionListener(	void *	inClientData,
@@ -254,22 +239,34 @@ void propListener(	void *                  inClientData,
     if (_connection) {
         connectStatus.text = @"Disconnecting";
         [_connection disconnect];
+//        [[MKAudio sharedAudio] stop];
+        [self setupAudioSessionForRecord];
         _connection = nil;
         return;
     }else{
+        [self stopAudioSession];
+//        MKAudioSettings settings;
+//        settings.transmitType = MKTransmitTypeVAD;
+//        settings.codec = MKCodecFormatCELT;
+//        settings.quality = 24000;
+//        settings.audioPerPacket = 10;
+//        settings.noiseSuppression = -42; /* -42 dB */
+//        settings.amplification = 20.0f;
+//        settings.jitterBufferSize = 0; /* 10 ms */
+//        settings.volume = 1.0;
+//        settings.outputDelay = 0; /* 10 ms */
+//        settings.enablePreprocessor = YES;
+//        
+//        MKAudio *audio = [MKAudio sharedAudio];
+//        [audio updateAudioSettings:&settings];
+//        [audio start];
+        
         connectStatus.text = @"Connecting";
         _connection = [[MKConnection alloc] init];
         [_connection setDelegate:self];
         
         _serverModel = [[MKServerModel alloc] initWithConnection:_connection];
         [_serverModel addDelegate:self];
-        
-        //    // Set the connection's client cert if one is set in the app's preferences...
-        //    NSData *certPersistentId = [[NSUserDefaults standardUserDefaults] objectForKey:@"DefaultCertificate"];
-        //    if (certPersistentId != nil) {
-        //        NSArray *certChain = [MUCertificateChainBuilder buildChainFromPersistentRef:certPersistentId];
-        //        [_connection setCertificateChain:certChain];
-        //    }
         
         [_connection connectToHost:SERVER_ADDRESS port:SERVER_PORT];
     }
