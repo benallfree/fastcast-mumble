@@ -14,6 +14,14 @@
 #import <MKCertificate.h>
 #import <AudioToolbox/AudioToolbox.h>
 
+#define SERVER_ADDRESS @"104.131.172.77"
+#define SERVER_PORT 64738
+#define USER_CAPACITY 15
+#define USER_LOCATION @"US Central"
+#define USER_NAME @"admin"
+#define USER_PASSWORD @"air%EbeaG4"
+#define SERVER_PASSWORD @"fastcast"
+
 @interface ViewController ()<MKConnectionDelegate, MKServerModelDelegate>
 {
     __weak IBOutlet UILabel *connectStatus;
@@ -263,7 +271,7 @@ void propListener(	void *                  inClientData,
         //        [_connection setCertificateChain:certChain];
         //    }
         
-        [_connection connectToHost:@"fastcast.mumble.com" port:3262];
+        [_connection connectToHost:SERVER_ADDRESS port:SERVER_PORT];
     }
 }
 
@@ -375,7 +383,7 @@ void propListener(	void *                  inClientData,
 #pragma mark - MKConnectionDelegate
 
 - (void) connectionOpened:(MKConnection *)conn {
-    [conn authenticateWithUsername:@"admin" password:@"air%EbeaG4" accessTokens:[NSArray new]];
+    [conn authenticateWithUsername:USER_NAME password:USER_PASSWORD accessTokens:nil];
 }
 
 - (void) connection:(MKConnection *)conn closedWithError:(NSError *)err {
