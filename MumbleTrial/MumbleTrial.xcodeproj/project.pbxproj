@@ -471,7 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: jackzdh@qq.com (36UNK43T7J)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhang Dahai (6T5C32Q5V8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhang Dahai (6T5C32Q5V8)";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Library/mumblekit/src/**";
 				INFOPLIST_FILE = MumbleTrial/Info.plist;
