@@ -25,13 +25,14 @@
 #define USER_PASSWORD @"air%EbeaG4"
 #define SERVER_PASSWORD @"fastcast"
 
-@interface ViewController ()<MKConnectionDelegate, MKServerModelDelegate>
+@interface ViewController ()<MKConnectionDelegate, MKServerModelDelegate, UITextFieldDelegate>
 {
     __weak IBOutlet UILabel *connectStatus;
     __weak IBOutlet UILabel *recordStatus;
     __weak IBOutlet UIButton *recordButton;
     __weak IBOutlet UIButton *playButton;
     __weak IBOutlet UIButton *deleteButton;
+    __weak IBOutlet UITextField *tfUserName;
     MKConnection *_connection;
     MKServerModel *_serverModel;
     
@@ -235,8 +236,9 @@ void propListener(	void *                  inClientData,
 }
 
 - (IBAction)onConnect:(id)sender {
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    
     if (_connection) {
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
         connectStatus.text = @"Disconnecting";
         [_connection disconnect];
 //        [[MKAudio sharedAudio] stop];
@@ -244,22 +246,16 @@ void propListener(	void *                  inClientData,
         _connection = nil;
         return;
     }else{
+        if (tfUserName.text.length == 0) {
+            UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Connection" message:@"Please enter User Name." preferredStyle:UIAlertControllerStyleAlert];
+            [controller addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:controller animated:true completion:nil];
+            return;
+        }
+        
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+        
         [self stopAudioSession];
-//        MKAudioSettings settings;
-//        settings.transmitType = MKTransmitTypeVAD;
-//        settings.codec = MKCodecFormatCELT;
-//        settings.quality = 24000;
-//        settings.audioPerPacket = 10;
-//        settings.noiseSuppression = -42; /* -42 dB */
-//        settings.amplification = 20.0f;
-//        settings.jitterBufferSize = 0; /* 10 ms */
-//        settings.volume = 1.0;
-//        settings.outputDelay = 0; /* 10 ms */
-//        settings.enablePreprocessor = YES;
-//        
-//        MKAudio *audio = [MKAudio sharedAudio];
-//        [audio updateAudioSettings:&settings];
-//        [audio start];
         
         connectStatus.text = @"Connecting";
         _connection = [[MKConnection alloc] init];
@@ -380,7 +376,7 @@ void propListener(	void *                  inClientData,
 #pragma mark - MKConnectionDelegate
 
 - (void) connectionOpened:(MKConnection *)conn {
-    [conn authenticateWithUsername:USER_NAME password:USER_PASSWORD accessTokens:nil];
+    [conn authenticateWithUsername:tfUserName.text password:@"" accessTokens:nil];
 }
 
 - (void) connection:(MKConnection *)conn closedWithError:(NSError *)err {
@@ -472,92 +468,96 @@ void propListener(	void *                  inClientData,
 // The server rejected our connection.
 - (void) connection:(MKConnection *)conn rejectedWithReason:(MKRejectReason)reason explanation:(NSString *)explanation {
     NSString *title = NSLocalizedString(@"Connection Rejected", nil);
-    NSString *msg = nil;
-    UIAlertView *alert = nil;
+//    NSString *msg = nil;
+//    UIAlertView *alert = nil;
     
     [self hideConnectingView];
     [self teardownConnection];
     
-    switch (reason) {
-        case MKRejectReasonNone:
-            msg = NSLocalizedString(@"No reason", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:nil
-                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                     otherButtonTitles:nil];
-            break;
-        case MKRejectReasonWrongVersion:
-            msg = @"Client/server version mismatch";
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:nil
-                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                     otherButtonTitles:nil];
-            
-            break;
-        case MKRejectReasonInvalidUsername:
-            msg = NSLocalizedString(@"Invalid username", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:self
-                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
-                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
-            [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-            [[alert textFieldAtIndex:0] setText:@"admin"];
-            break;
-        case MKRejectReasonWrongUserPassword:
-            msg = NSLocalizedString(@"Wrong certificate or password for existing user", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:self
-                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
-                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
-            [alert setAlertViewStyle:UIAlertViewStyleSecureTextInput];
-            [[alert textFieldAtIndex:0] setText:@"air%EbeaG4"];
-            break;
-        case MKRejectReasonWrongServerPassword:
-            msg = NSLocalizedString(@"Wrong server password", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:self
-                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
-                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
-            [alert setAlertViewStyle:UIAlertViewStyleSecureTextInput];
-            [[alert textFieldAtIndex:0] setText:@"air%EbeaG4"];
-            break;
-        case MKRejectReasonUsernameInUse:
-            msg = NSLocalizedString(@"Username already in use", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:self
-                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
-                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
-            [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-            [[alert textFieldAtIndex:0] setText:@"admin"];
-            break;
-        case MKRejectReasonServerIsFull:
-            msg = NSLocalizedString(@"Server is full", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:nil
-                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                     otherButtonTitles:nil];
-            break;
-        case MKRejectReasonNoCertificate:
-            msg = NSLocalizedString(@"A certificate is needed to connect to this server", nil);
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:msg
-                                              delegate:nil
-                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                     otherButtonTitles:nil];
-            break;
-    }
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:@"Connection Rejected. Please try again." preferredStyle:UIAlertControllerStyleAlert];
+    [controller addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:controller animated:true completion:nil];
     
-//    _rejectAlertView = alert;
-//    _rejectReason = reason;
-    
-    [alert show];
+//    switch (reason) {
+//        case MKRejectReasonNone:
+//            msg = NSLocalizedString(@"No reason", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:nil
+//                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+//                                     otherButtonTitles:nil];
+//            break;
+//        case MKRejectReasonWrongVersion:
+//            msg = @"Client/server version mismatch";
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:nil
+//                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+//                                     otherButtonTitles:nil];
+//            
+//            break;
+//        case MKRejectReasonInvalidUsername:
+//            msg = NSLocalizedString(@"Invalid username", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:self
+//                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+//                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
+//            [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+//            [[alert textFieldAtIndex:0] setText:@"admin"];
+//            break;
+//        case MKRejectReasonWrongUserPassword:
+//            msg = NSLocalizedString(@"Wrong certificate or password for existing user", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:self
+//                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+//                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
+//            [alert setAlertViewStyle:UIAlertViewStyleSecureTextInput];
+//            [[alert textFieldAtIndex:0] setText:@"air%EbeaG4"];
+//            break;
+//        case MKRejectReasonWrongServerPassword:
+//            msg = NSLocalizedString(@"Wrong server password", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:self
+//                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+//                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
+//            [alert setAlertViewStyle:UIAlertViewStyleSecureTextInput];
+//            [[alert textFieldAtIndex:0] setText:@"air%EbeaG4"];
+//            break;
+//        case MKRejectReasonUsernameInUse:
+//            msg = NSLocalizedString(@"Username already in use", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:self
+//                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+//                                     otherButtonTitles:NSLocalizedString(@"Reconnect", nil), nil];
+//            [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+//            [[alert textFieldAtIndex:0] setText:@"admin"];
+//            break;
+//        case MKRejectReasonServerIsFull:
+//            msg = NSLocalizedString(@"Server is full", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:nil
+//                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+//                                     otherButtonTitles:nil];
+//            break;
+//        case MKRejectReasonNoCertificate:
+//            msg = NSLocalizedString(@"A certificate is needed to connect to this server", nil);
+//            alert = [[UIAlertView alloc] initWithTitle:title
+//                                               message:msg
+//                                              delegate:nil
+//                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+//                                     otherButtonTitles:nil];
+//            break;
+//    }
+//    
+////    _rejectAlertView = alert;
+////    _rejectReason = reason;
+//    
+//    [alert show];
 }
 
 
@@ -582,6 +582,12 @@ void propListener(	void *                  inClientData,
 //    [_parentViewController presentModalViewController:_serverRoot animated:YES];
 //    [_parentViewController release];
 //    _parentViewController = nil;
+}
+
+#pragma mark - TextField Delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return [textField resignFirstResponder];
 }
 
 @end
