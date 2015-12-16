@@ -21,7 +21,7 @@
 #define SERVER_PORT 64738
 #define USER_CAPACITY 15
 #define USER_LOCATION @"US Central"
-#define USER_NAME @"admin1"
+#define USER_NAME @"admin3"
 #define USER_PASSWORD @"air%EbeaG4"
 #define SERVER_PASSWORD @"fastcast"
 

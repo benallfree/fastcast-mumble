@@ -22,6 +22,8 @@
     MKAudioSettings settings;
     settings.transmitType = MKTransmitTypeVAD;
     settings.codec = MKCodecFormatCELT;
+    settings.vadMin = 0.3;
+    settings.vadMax = 0.6;
     settings.quality = 24000;
     settings.audioPerPacket = 10;
     settings.noiseSuppression = -42; /* -42 dB */
